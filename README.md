@@ -234,5 +234,4 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 # URL Links:
 
-Live: https://matrix-payme.vercel.app/   
-Development: matrix-payme-77zosxbpm-aurelianspodarec.vercel.app  
+Live: https://matrix-payme.vercel.app/  
