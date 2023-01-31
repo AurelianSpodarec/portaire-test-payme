@@ -1,27 +1,15 @@
 import React, { useEffect, useRef, forwardRef } from 'react';
 import Input from "views/atoms/Input/Input";
 import SelectItem from "./SelectItem";
-
-const InputWithRef = React.forwardRef((props: any, ref) => (
-    <Input ref={ref} {...props} />
-));
+ 
   
 function SelectMenu({ open, handleSearchChange, data , filteredData, value, setValue, setOpen, onChange}:any) {
     
-    const inputRef = useRef<HTMLInputElement | null>(null);
-
-    useEffect(() => {
-        if(inputRef.current !== null) {
-            inputRef.current.focus();
-        }
-    }, [open])
-
     return (
         <div className="absolute -translate-y-[50px] h-[136px] z-50 bg-white w-full">
         <div className="relative">
 
-            <InputWithRef
-                ref={inputRef}
+            <Input
                 className={`w-full js-select ${open ? "border-[#0066FF]" : ""}`} 
                 placeholder="Type to search"         
                 onChange={(e: any) => handleSearchChange(e)}  
